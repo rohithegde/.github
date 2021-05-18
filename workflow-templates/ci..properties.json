@@ -1,0 +1,7 @@
+{
+  "name": "Remote Dispatch Action Responder",
+  "description": "Common CI workflow template.",
+  "iconName": "example-icon",
+  "categories": [],
+  "filePatterns": []
+}

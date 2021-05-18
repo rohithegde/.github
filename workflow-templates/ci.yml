@@ -1,0 +1,14 @@
+name: Remote Dispatch Action Responder
+
+on: [repository_dispatch]
+
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Event Information
+        run: |
+          echo "Event '${{ github.event.action }}' received from '${{ github.event.client_payload.repository }}'"
+      - uses: actions/setup-node@v1
+      - run: npm install -g bats
+      - run: bats -v
